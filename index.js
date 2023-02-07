@@ -31,7 +31,7 @@ class GamepadExtension {
 
     getInfo () {
         return {
-            id: 'gamepad',
+            id: 'pinecone-gamepad',
             name: 'Gamepad',
             color1: '#FF8C1A',
             color2: '#DB6E00',
@@ -199,23 +199,19 @@ class GamepadExtension {
             break;
 
         case 'direction_0':
-            returnVal =
-            controller?.movement[0]?.direction || 0;
+            returnVal = controller?.movement[0]?.direction || 0;
             break;
 
         case 'direction_1':
-            returnVal =
-            controller?.movement[1]?.direction || 0;
+            returnVal = controller?.movement[1]?.direction || 0;
             break;
 
         case 'distance_0':
-            returnVal =
-            controller?.movement[0]?.distance || 0;
+            returnVal = controller?.movement[0]?.distance || 0;
             break;
 
         case 'distance_1':
-            returnVal =
-            controller?.movement[1]?.distance || 0;
+            returnVal = controller?.movement[1]?.distance || 0;
             break;
 
         case 'timestamp':
@@ -233,7 +229,7 @@ class GamepadExtension {
      * @param {string} args.VAL
      * @param {BlockUtility} info
      * @param {object} block
-     * @returns
+     * @returns {void}
      */
     is_pressed (args, info, block){
         return this.when_pressed(args, info, block);
@@ -253,7 +249,7 @@ class GamepadExtension {
      * @param {*} args
      * @param {*} info
      * @param {*} block
-     * @returns
+     * @returns {void}
      */
     is_released (args, info, block){
         return this.when_released(args, info, block);
